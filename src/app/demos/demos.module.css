@@ -1,0 +1,117 @@
+.container {
+    min-height: 100vh;
+    padding: 100px var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-sm);
+    background: linear-gradient(135deg, var(--color-text-main) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    width: 100%;
+    animation: slideUp 0.8s ease-out 0.2s backwards;
+}
+
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.cardContent {
+    margin-bottom: var(--spacing-md);
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-main);
+}
+
+.cardDescription {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cardArrow {
+    color: var(--color-primary);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all var(--transition-fast);
+}
+
+.card:hover .cardArrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

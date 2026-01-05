@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>langchain_demo01 - 前端开发视角</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        .reveal h1 {
+            font-size: 48px;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #999
+        }
+
+        .slides section {
+            max-width: 900px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>langchain_demo01</h1>
+                <p class="meta">前端开发视角 — 项目简介与开发要点</p>
+                <p class="meta">作者： （可由生成脚本注入） | 公司： （可由生成脚本注入）</p>
+            </section>
+            <section>
+                <h2>项目概述</h2>
+                <ul>
+                    <li>基于 Next.js (App Router) 的示例项目</li>
+                    <li>演示路由、布局、CSS Modules 与字体配置</li>
+                    <li>目标：前端工程化实践与代码组织示例</li>
+                </ul>
+            </section>
+            <section>
+                <h2>技术栈</h2>
+                <ul>
+                    <li>Next.js (App Router)</li>
+                    <li>React Server Components + 客户端组件</li>
+                    <li>CSS Modules、next/font、静态资源放 public/</li>
+                    <li>测试：Jest（仓库含示例测试）</li>
+                </ul>
+            </section>
+            <section>
+                <h2>代码组织</h2>
+                <ul>
+                    <li>src/app: 路由与页面（Server Components 默认为服务端）</li>
+                    <li>@/lib 用于放置共享工具（约定）</li>
+                    <li>components、styles 模块化，遵循项目约定</li>
+                </ul>
+            </section>
+            <section>
+                <h2>本地开发与构建</h2>
+                <ul>
+                    <li>运行：npm run dev（含 turbopack）</li>
+                    <li>生产构建：npm run build && npm run start</li>
+                    <li>样式与路由遵循 App Router 约定</li>
+                </ul>
+            </section>
+            <section>
+                <h2>测试与质量</h2>
+                <ul>
+                    <li>仓库包含 Jest 配置与示例测试文件</li>
+                    <li>使用 ESLint（scripts 中含 lint 脚本）</li>
+                    <li>建议：CI 中加入 lint + test 步骤</li>
+                </ul>
+            </section>
+            <section>
+                <h2>运行与调试要点</h2>
+                <ul>
+                    <li>优先在服务端获取数据，必要时在客户端组件使用 'use client'</li>
+                    <li>使用 next/link 做内部导航以启用预取</li>
+                    <li>静态资源在 public/ 下，通过绝对路径引用</li>
+                </ul>
+            </section>
+            <section>
+                <h2>下一步建议</h2>
+                <ul>
+                    <li>完善文档：贡献指南与本地开发快速开始</li>
+                    <li>为关键页面添加更多测试覆盖</li>
+                    <li>在 CI 中生成并发布演示 PPT 或 HTML</li>
+                </ul>
+                <p class="footer">生成脚本：scripts/generate_ppt.py · PowerShell 自动化：scripts/make_ppt.ps1</p>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true
+        });
+    </script>
+</body>
+
+</html>
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>langchain_demo01 - 前端开发视角</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>langchain_demo01</h1>
+                <p>前端开发视角 — 项目简介与开发要点</p>
+            </section>
+            <section>
+                <h2>项目概述</h2>
+                <ul>
+                    <li>基于 Next.js (App Router) 的示例项目</li>
+                    <li>演示路由、布局、CSS Modules 与字体配置</li>
+                    <li>目标：前端工程化实践与代码组织示例</li>
+                </ul>
+            </section>
+            <section>
+                <h2>技术栈</h2>
+                <ul>
+                    <li>Next.js (App Router)</li>
+                    <li>React Server Components + 客户端组件</li>
+                    <li>CSS Modules、next/font、静态资源放 public/</li>
+                    <li>测试：Jest（仓库含示例测试）</li>
+                </ul>
+            </section>
+            <section>
+                <h2>代码组织</h2>
+                <ul>
+                    <li>src/app: 路由与页面（Server Components 默认为服务端）</li>
+                    <li>@/lib 用于放置共享工具（约定）</li>
+                    <li>components、styles 模块化，遵循项目约定</li>
+                </ul>
+            </section>
+            <section>
+                <h2>本地开发与构建</h2>
+                <ul>
+                    <li>运行：npm run dev（含 turbopack）</li>
+                    <li>生产构建：npm run build && npm run start</li>
+                    <li>样式与路由遵循 App Router 约定</li>
+                </ul>
+            </section>
+            <section>
+                <h2>测试与质量</h2>
+                <ul>
+                    <li>仓库包含 Jest 配置与示例测试文件</li>
+                    <li>使用 ESLint（scripts 中含 lint 脚本）</li>
+                    <li>建议：CI 中加入 lint + test 步骤</li>
+                </ul>
+            </section>
+            <section>
+                <h2>运行与调试要点</h2>
+                <ul>
+                    <li>优先在服务端获取数据，必要时在客户端组件使用 'use client'</li>
+                    <li>使用 next/link 做内部导航以启用预取</li>
+                    <li>静态资源在 public/ 下，通过绝对路径引用</li>
+                </ul>
+            </section>
+            <section>
+                <h2>下一步建议</h2>
+                <ul>
+                    <li>完善文档：贡献指南与本地开发快速开始</li>
+                    <li>为关键页面添加更多测试覆盖</li>
+                    <li>在 CI 中生成并发布演示 PPT 或 HTML</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            center: true
+        });
+    </script>
+</body>
+
+</html>
