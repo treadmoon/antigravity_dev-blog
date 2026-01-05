@@ -7,10 +7,10 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <section className={styles.hero}>
-          <h1 className={styles.title}>
+          <h4 className={styles.title}>
             Elevate Your <br />
             Web Experience
-          </h1>
+          </h4>
           <p className={styles.subtitle}>
             A premium foundation for your next project, featuring a modern design system,
             fluid animations, and a rich color palette.
@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
+
       <footer className={styles.footer}>
         <p>© 2025 LangChain Demo. All rights reserved.</p>
       </footer>

@@ -117,8 +117,7 @@ a {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
   padding: 0 var(--spacing-md);
   z-index: 1000;
   background: rgba(255, 255, 255, 0.8);
@@ -131,6 +130,20 @@ a {
   .nav {
     background: rgba(10, 10, 10, 0.8);
   }
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-right: var(--spacing-md);
 }
 
 .nav a {

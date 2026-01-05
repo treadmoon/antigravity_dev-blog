@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono, Playfair_Display, Outfit } from "next/font/google";
-import Link from 'next/link'
+import Navigation from "../components/Navigation";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,13 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${outfit.variable}`}>
-        <nav className="nav">
-          <Link href="/">Home</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/login">Login</Link>
-          <Link href="/demos">Demos</Link>
-        </nav>
+        <Navigation />
 
         {children}
       </body>

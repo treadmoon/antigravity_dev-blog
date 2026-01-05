@@ -2,6 +2,11 @@ import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import RootLayout from '../layout'
 
+// Mock next/navigation 因为 Navigation 组件使用了 usePathname
+jest.mock('next/navigation', () => ({
+    usePathname: jest.fn(() => '/'),
+}))
+
 describe('RootLayout', () => {
     it('renders navigation links', () => {
         // 渲染 RootLayout 组件
